@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "ch09_structs"
+name = "ch_examples"
 version = "0.1.0"

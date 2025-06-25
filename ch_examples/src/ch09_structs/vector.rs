@@ -3,7 +3,7 @@ pub struct Vector2 {
     y: f32,
 }
 
-impl vector2 {
+impl Vector2 {
     const ZERO: Vector2 = Vector2 { x: 0.0, y: 0.0 };
     const UNIT: Vector2 = Vector2 { x: 1.0, y: 0.0 };
     const NAME: &'static str = "Vector2";

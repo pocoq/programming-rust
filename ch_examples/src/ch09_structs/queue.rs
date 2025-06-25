@@ -1,3 +1,27 @@
+pub struct GenericQueue<T> {
+	older: Vec<T>,
+	younger: Vec<T>,
+}
+
+impl<T> GenericQueue<T>{
+	pub fn new() -> GenericQueue<T>{
+		GenericQueue {
+			older: Vec::new(),
+			younger: Vec::new(),
+		}
+	}
+	pub fn push(&mut self, t: T){
+		self.younger.push(t);
+	}
+	pub fn is_empty(&self) -> bool {
+		self.older.is_empty() && self.younger.is_empty()
+	}
+	 pub fn split(self) -> (Vec<T>, Vec<T>) {
+        (self.older, self.younger)
+    }
+
+}
+
 pub struct Queue {
     older: Vec<char>,
     younger: Vec<char>,
@@ -52,4 +76,20 @@ pub fn handle_queue() {
 
     let mut bq = Box::new(Queue::new());
     bq.push('A');
+}
+
+pub fn handle_generic_queue(){
+	let mut q = GenericQueue::new();
+	let mut r = GenericQueue::new();
+	q.push("CAD");
+	r.push(0.74);
+	q.push ("BTC");
+	r.push(13764.0);
+	let (older, younger) = q.split();
+    // q is now uninitialized.
+    println!("Generic Queue older: {:?}, younger: {:?}", older, younger);
+
+	let (older, younger) = r.split();
+    // q is now uninitialized.
+    println!("Generic Queue older: {:?}, younger: {:?}", older, younger);
 }

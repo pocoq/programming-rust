@@ -1,10 +1,11 @@
 pub mod ch09_structs;
 pub mod ch10_enums;
+pub mod ch11_traits;
 
-use ch09_structs::{node, queue};
-use ch10_enums::time_units;
+use ch09_structs::{node, queue, vector};
+use ch10_enums::{planets, time_units};
+use ch11_traits::files;
 
-use crate::{ch09_structs::vector, ch10_enums::planets};
 fn main() {
     //    Chapter 09 - Structs
     println!("Chaper 09 - Structs ");
@@ -35,4 +36,13 @@ fn main() {
 
     println!("* Patterns example *");
     ch10_enums::patterns::handle_patterns();
+
+    println!("-------------------------------------------------------");
+    //    Chapter 11 - Traits
+    println!("Chapter 11 - Traits ");
+
+    println!("* Files example *");
+    files::write_to_file();
+
+    println!("-------------------------------------------------------");
 }

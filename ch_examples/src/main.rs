@@ -25,12 +25,14 @@ fn main() {
     //    Chapter 10 - Enums
     println!("Chapter 10 - Enums ");
     println!("* Rough time example *");
-
     time_units::handle_rough_time();
+
     println!("* Shape example *");
-
     time_units::handle_shape();
-    println!("* Planets example *");
 
+    println!("* Planets example *");
     planets::handle_planets();
+
+    println!("* Patterns example *");
+    ch10_enums::patterns::handle_patterns();
 }

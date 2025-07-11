@@ -13,13 +13,12 @@ fn main() {
     queue::handle_queue();
 
     println!("* Generic Queue *");
-
     queue::handle_generic_queue();
+
     println!("* Node example *");
-
     node::handle_node();
-    println!("* Extrema example *");
 
+    println!("* Extrema example *");
     vector::handle_extrema();
 
     println!("-------------------------------------------------------");
